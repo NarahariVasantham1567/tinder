@@ -1,10 +1,7 @@
 const mongoose = require('mongoose');
 
-const URL =
-  'mongodb+srv://narahari:hari1567@namastenode.e4nsd6c.mongodb.net/tinder';
-
 const connectDB = async () => {
-  await mongoose.connect(URL);
+  await mongoose.connect(process.env.MONGO_SECRET_KEY);
 };
 
 module.exports = connectDB;
